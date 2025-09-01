@@ -1,10 +1,12 @@
-import Header from "@/components/layout/Header";
-// import Image from "next/image";
+import HomePage from "@/components/home/HomePage";
+import PublicLayout from "./layouts/public-layout";
 
 export default function Home() {
   return (
-    <div>
-      <Header/>
-    </div>
+    <>
+    <PublicLayout>
+     <HomePage/>
+    </PublicLayout>
+    </>
   );
 }
