@@ -4,9 +4,9 @@ import PublicLayout from "./layouts/public-layout";
 export default function Home() {
   return (
     <>
-    <PublicLayout>
-     <HomePage/>
-    </PublicLayout>
+      <PublicLayout>
+        <HomePage />
+      </PublicLayout>
     </>
   );
 }
