@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import LogoutButton from "./LogoutButton";
+import Link from "next/link";
 
 export default async function AdminDashboard() {
   const cookieStore = await cookies();
@@ -14,10 +15,18 @@ export default async function AdminDashboard() {
     <div className="p-8 min-h-screen bg-gray-100">
       <h1 className="text-3xl font-bold mb-6">داشبورد ادمین</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-        <Card title="مجموع فروش" value="۲۵,۴۳۰ $" icon="💰" />
-        <Card title="تعداد سفارش‌ها" value="۱,۲۴۵" icon="🛒" />
-        <Card title="کاربران" value="۵,۳۲۰" icon="👤" />
-        <Card title="محصولات" value="۲۳۰" icon="📦" />
+        <Link href="/admin">
+          <Card title="مجموع فروش" value="۲۵,۴۳۰ $" icon="💰" />
+        </Link>
+        <Link href="/admin/orders">
+          <Card title="تعداد سفارش‌ها" value="۱,۲۴۵" icon="🛒" />
+        </Link>
+        <Link href="/admin/customers">
+          <Card title="کاربران" value="۵,۳۲۰" icon="👤" />
+        </Link>
+        <Link href="/admin/products">
+          <Card title="محصولات" value="۲۳۰" icon="📦" />
+        </Link>
       </div>
 
       <section className="bg-white p-6 rounded-2xl shadow mb-6">
