@@ -1,19 +1,16 @@
-"use client";
+"use client"
 import ProductForm from "@/components/adminPanel/ProductForm";
 
-export default function AddProductPage() {
-  const handleAddProduct = (productData) => {
-    console.log("محصول جدید:", productData);
-    alert("محصول جدید اضافه شد! (در کنسول چک کنید)");
-    // اینجا می‌توانید API یا دیتابیس را صدا بزنید
+export default function NewProductPage() {
+  const handleSaveProduct = (data) => {
+    console.log("محصول جدید:", data);
+    // اینجا می‌تونی API برای ذخیره محصول بزنی
   };
 
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-6 flex justify-center">
-        افزودن محصول جدید
-      </h1>
-      <ProductForm onSubmit={handleAddProduct} />
+    <div className="p-4 sm:p-8 min-h-screen bg-gray-100">
+      <h1 className="text-2xl font-bold mb-6">افزودن محصول جدید</h1>
+      <ProductForm onSubmit={handleSaveProduct} />
     </div>
   );
 }

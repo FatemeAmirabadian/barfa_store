@@ -1,14 +1,13 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import LogoutButton from "./LogoutButton";
 import Link from "next/link";
 
 export default async function AdminDashboard() {
   const cookieStore = await cookies();
   const token = cookieStore.get("admin_token");
 
-  if (!token || token.value !== "valid") {
-    redirect("/admin/login"); // بدون کوکی معتبر → ریدایرکت
+  if (!token ) {
+    redirect("/adminlogin"); // بدون کوکی معتبر → ریدایرکت
   }
 
   return (
@@ -62,8 +61,6 @@ export default async function AdminDashboard() {
           </tbody>
         </table>
       </section>
-
-      <LogoutButton />
     </div>
   );
 }

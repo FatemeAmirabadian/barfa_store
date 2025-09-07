@@ -1,4 +1,3 @@
-// app/admin/components/ProductForm.jsx
 "use client";
 import { useState } from "react";
 

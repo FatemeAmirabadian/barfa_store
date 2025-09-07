@@ -2,8 +2,10 @@
 
 export default function LogoutButton() {
   const handleLogout = async () => {
-    await fetch("/api/admin/auth", { method: "DELETE" });
-    window.location.href = "/admin/login";
+    await fetch("/api/adminlogout", { method: "DELETE" });
+
+    // بعد از حذف کوکی → ریدایرکت به لاگین ادمین
+    window.location.href = "/adminlogin";
   };
 
   return (

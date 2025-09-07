@@ -1,13 +1,21 @@
+import Link from "next/link";
+import LogoutButton from "@/components/adminPanel/LogoutButton";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import AdminPanel from "@/components/adminPanel/AdminDashboard";
+import AdminDashboard from "@/components/adminPanel/AdminDashboard";
 
-export default async function AdminDashboard() {
-  const token = cookies().get("admin_token");
+export default async function Admin() {
+  const cookieStore = await cookies();
+  const token = cookieStore.get("admin_token")?.value;
 
-  if (!token || token.value !== "valid") {
-    redirect("/admin/login");
+  if (token !== "valid") {
+    redirect("/adminlogin");
   }
 
-  return <AdminPanel />;
+  return (
+    <div className="p-8 min-h-screen bg-gray-100">
+      <LogoutButton />
+      <AdminDashboard />
+    </div>
+  );
 }

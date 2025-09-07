@@ -1,4 +1,3 @@
-// app/admin/customers/new/page.jsx
 "use client";
 import CustomerForm from "@/components/adminPanel/CustomerForm";
 import { useState } from "react";
@@ -15,7 +14,7 @@ export default function NewCustomerPage() {
 
   return (
     <div className="p-6">
-      <h1 className="text-3xl font-bold mb-6">افزودن مشتری جدید</h1>
+      <h1 className="text-3xl font-bold mb-6 flex justify-center">افزودن مشتری جدید</h1>
       <CustomerForm onSubmit={handleAddCustomer} />
     </div>
   );
