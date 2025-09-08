@@ -1,12 +1,9 @@
-import HomePage from "@/components/home/HomePage";
-import PublicLayout from "./layouts/public-layout";
+import HomePage from "@/components/sections/HomePage";
 
 export default function Home() {
   return (
     <>
-      <PublicLayout>
-        <HomePage />
-      </PublicLayout>
+      <HomePage/>
     </>
   );
 }

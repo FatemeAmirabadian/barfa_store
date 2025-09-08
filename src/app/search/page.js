@@ -1,8 +1,6 @@
-import PublicLayout from "@/app/layouts/public-layout";
 
 export default function SearchPage() {
   return (
-    <PublicLayout>
       <main className="p-4 min-h-screen">
         <h1 className="text-3xl font-bold mb-4">جستجو</h1>
         <input
@@ -12,6 +10,5 @@ export default function SearchPage() {
         />
         {/* نتایج جستجو بعدا اضافه می‌شوند */}
       </main>
-    </PublicLayout>
   );
 }

@@ -1,8 +1,8 @@
-export default function Logo({ size = "h-10" }) {
+export default function Logo() {
     return (
-      <a href="/" className={`inline-block ${size}`}>
+      <a href="/" className="inline-block">
         <img
-          src="/images/logo.png" // مسیر لوگو
+          src="/images/logo/logo.svg" 
           alt="فروشگاه ما"
           className="w-auto h-full"
         />

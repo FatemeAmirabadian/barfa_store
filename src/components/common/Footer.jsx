@@ -43,12 +43,12 @@ export default function Footer() {
                 placeholder="ایمیل شما"
                 className="flex-1 px-4 py-2 rounded-lg text-gray-900 focus:outline-none"
               />
-              <button
+              {/* <button
                 type="submit"
                 className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
               >
                 عضویت
-              </button>
+              </button> */}
             </form>
             <div className="flex gap-4">
               <a href="#" aria-label="Instagram" className="hover:text-white">📷</a>
