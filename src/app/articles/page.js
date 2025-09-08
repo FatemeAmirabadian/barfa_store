@@ -1,5 +1,3 @@
-import PublicLayout from "../layouts/public-layout";
-
 const articles = [
   {
     title: "راهنمای خرید کفش ورزشی",
@@ -15,13 +13,11 @@ const articles = [
 
 export default function ArticlesPage() {
   return (
-   <PublicLayout>
-     <main className="p-4 min-h-screen">
+   <main className="p-4 min-h-screen">
       <h1 className="text-3xl font-bold mb-6">مقالات</h1>
       <div className="grid gap-4 md:grid-cols-2">
         ...
       </div>
     </main>
-   </PublicLayout>
   );
 }

@@ -1,8 +1,5 @@
-import PublicLayout from "../layouts/public-layout";
-
 export default function ContactPage() {
   return (
-    <PublicLayout>
       <main className="p-4 min-h-screen">
         <h1 className="text-3xl font-bold mb-4">تماس با ما</h1>
         <form className="space-y-2 max-w-md">
@@ -25,6 +22,5 @@ export default function ContactPage() {
           </button>
         </form>
       </main>
-    </PublicLayout>
   );
 }
